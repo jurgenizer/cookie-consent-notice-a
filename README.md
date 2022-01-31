@@ -1,2 +1,7 @@
 # cookie-consent-notice-a
-Cookie Consent Notice, type a
+JavaScript Cookie Consent Notice, type a. 
+
+Part of a typology of seven cookie consent notice types observed on popular South Africa websites in December 2021. This 'type a' cookie consent notice forms part of my Master of IS research. It will be compared to a Design Science Research (DSR) artifact that aims to produce an improved cookie consent notice.
+
+Typology adapted from Utz et al. (2019), who evaluated the GUI of six types of cookie consent notices in a series of online experiments.
+Reference: Utz, C., Degeling, M., Fahl, S., Schaub, F., & Holz, T. (2019). (Un)informed consent: Studying GDPR consent notices in the field. Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security, USA, 973–990. https://doi.org/10.1145/3319535.3354212
