@@ -1,10 +1,10 @@
 /*
     Cookie Consent Notice Type a
     CREATED BY JURGEN GEITNER
-    Adapted from https://github.com/manucaralmo/GlowCookies 
+    Adapted from https://github.com/manucaralmo/GlowCookies
 */
 
-class GlowCookies {
+class CookieConsentNotice {
   constructor() {
     // Cookies banner
     this.banner = undefined
@@ -33,7 +33,7 @@ class GlowCookies {
   createDOMElements() {
     // COOKIES BUTTON
     this.PreBanner = document.createElement("div");
-    this.PreBanner.innerHTML = `<button type="button" id="prebannerBtn" class="prebanner prebanner__border__${this.config.bannerStyle} glowCookies__${this.config.position} glowCookies__${this.config.border} animation" style="color: ${this.banner.manageCookies.color}; background-color: ${this.banner.manageCookies.background};">
+    this.PreBanner.innerHTML = `<button type="button" id="prebannerBtn" class="prebanner prebanner__border__${this.config.bannerStyle} cookieConsentNotice__${this.config.position} cookieConsentNotice__${this.config.border} animation" style="color: ${this.banner.manageCookies.color}; background-color: ${this.banner.manageCookies.background};">
                                       <svg fill="currentColor" style="margin-right: 7px; margin-top: 2px; vertical-align: text-top;" height="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                           <path d="M510.52 255.82c-69.97-.85-126.47-57.69-126.47-127.86-70.17 0-127-56.49-127.86-126.45-27.26-4.14-55.13.3-79.72 12.82l-69.13 35.22a132.221 132.221 0 0 0-57.79 57.81l-35.1 68.88a132.645 132.645 0 0 0-12.82 80.95l12.08 76.27a132.521 132.521 0 0 0 37.16 72.96l54.77 54.76a132.036 132.036 0 0 0 72.71 37.06l76.71 12.15c27.51 4.36 55.7-.11 80.53-12.76l69.13-35.21a132.273 132.273 0 0 0 57.79-57.81l35.1-68.88c12.56-24.64 17.01-52.58 12.91-79.91zM176 368c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm32-160c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm160 128c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"/>
                                       </svg>${this.banner.manageCookies.text}</button>`;
@@ -43,8 +43,8 @@ class GlowCookies {
     // COOKIES BANNER
     this.Cookies = document.createElement("div");
     this.Cookies.innerHTML = `<div 
-                                      id="glowCookies-banner" 
-                                      class="glowCookies__banner glowCookies__banner__${this.config.bannerStyle} glowCookies__${this.config.border} glowCookies__${this.config.position}"
+                                      id="cookieConsentNotice-banner" 
+                                      class="cookieConsentNotice__banner cookieConsentNotice__banner__${this.config.bannerStyle} cookieConsentNotice__${this.config.border} cookieConsentNotice__${this.config.position}"
                                       style="background-color: ${this.banner.background};"
                                   >
                                       <h3 style="color: ${this.banner.color};">${this.banner.heading}</h3>
@@ -70,7 +70,7 @@ class GlowCookies {
                                   </div>
                               `;
     document.body.appendChild(this.Cookies);
-    this.DOMbanner = document.getElementById('glowCookies-banner')
+    this.DOMbanner = document.getElementById('cookieConsentNotice-banner')
 
 
     // SET EVENT LISTENERS
@@ -80,7 +80,7 @@ class GlowCookies {
   }
 
   checkStatus() {
-    switch (localStorage.getItem("GlowCookies")) {
+    switch (localStorage.getItem("CookieConsentNotice")) {
       case "1":
         this.openManageCookies();
         this.activateTracking();
@@ -96,23 +96,23 @@ class GlowCookies {
 
   openManageCookies() {
     this.PreBanner.style.display = this.config.hideAfterClick ? "none" : "block"
-    this.DOMbanner.classList.remove('glowCookies__show')
+    this.DOMbanner.classList.remove('cookieConsentNotice__show')
   }
 
   openSelector() {
     this.PreBanner.style.display = "none";
-    this.DOMbanner.classList.add('glowCookies__show')
+    this.DOMbanner.classList.add('cookieConsentNotice__show')
   }
 
   acceptCookies() {
-    localStorage.setItem("GlowCookies", "1")
+    localStorage.setItem("CookieConsentNotice", "1")
     this.openManageCookies()
     this.activateTracking()
     this.addCustomScript()
   }
 
   rejectCookies() {
-    localStorage.setItem("GlowCookies", "0");
+    localStorage.setItem("CookieConsentNotice", "0");
     this.openManageCookies();
     this.disableTracking();
   }
@@ -314,4 +314,4 @@ class LanguagesGC {
 
 }
 
-const glowCookies = new GlowCookies()
+const cookieConsentNotice = new CookieConsentNotice()
