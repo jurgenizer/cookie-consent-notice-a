@@ -240,7 +240,7 @@ class CookieConsentNotice {
       border: obj.border || 'border',
       position: obj.position || 'left',
       hideAfterClick: obj.hideAfterClick || false,
-      bannerStyle: obj.style || 2
+      bannerStyle: obj.style || 'basic'
     }
 
     this.tracking = {
@@ -255,20 +255,20 @@ class CookieConsentNotice {
       linkText: obj.bannerLinkText || lang.bannerLinkText,
       link: obj.policyLink || '#link',
       background: obj.bannerBackground || '#fff',
-      color: obj.bannerColor || '#1d2e38',
+      color: obj.bannerColor || '#4a4a4a',
       heading: obj.bannerHeading !== 'none' ? obj.bannerHeading || lang.bannerHeading : '',
       acceptBtn: {
         text: obj.acceptBtnText || lang.acceptBtnText,
-        background: obj.acceptBtnBackground || '#253b48',
+        background: obj.acceptBtnBackground || '#209cee',
         color: obj.acceptBtnColor || '#fff'
       },
       rejectBtn: {
         text: obj.rejectBtnText || lang.rejectBtnText,
-        background: obj.rejectBtnBackground || '#E8E8E8',
-        color: obj.rejectBtnColor || '#636363'
+        background: obj.rejectBtnBackground || '#eeeeee',
+        color: obj.rejectBtnColor || '#4a4a4a'
       },
       manageCookies: {
-        color: obj.manageColor || '#1d2e38',
+        color: obj.manageColor || '#4a4a4a',
         background: obj.manageBackground || '#fff',
         text: obj.manageText || lang.manageText,
       }
