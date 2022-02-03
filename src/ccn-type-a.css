@@ -61,13 +61,17 @@
 .cookieConsentNotice__banner .btn__section button:focus {
   outline: none;
   transform: scale(0.95);
-  -webkit-filter: contrast(75%);
-  filter: contrast(75%);
+  /*-webkit-filter: contrast(75%);
+  filter: contrast(75%);*/
+  -webkit-filter: brightness(78%);
+  filter: brightness(78%);
 }
 
 .cookieConsentNotice__banner .btn__section button:hover {
-  -webkit-filter: contrast(85%);
-  filter: contrast(85%);
+ /* -webkit-filter: contrast(85%);
+  filter: contrast(85%);*/
+  -webkit-filter: brightness(88%);
+  filter: brightness(88%);
 }
 
 @media (max-width: 455px) {
